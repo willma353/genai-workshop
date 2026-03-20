@@ -353,7 +353,18 @@
     }
     .terminal-body .prompt { color: var(--green); }
     .terminal-body .cmd { color: var(--text); }
-    .terminal-body .output { color: var(--text-dim); }
+    .terminal-body .output {
+      color: var(--text-dim);
+      display: block;
+      position: relative;
+      padding-left: 1.1em;
+    }
+    .terminal-body .output::before {
+      content: '>';
+      position: absolute;
+      left: 0;
+      color: var(--text-dim);
+    }
     .terminal-body .highlight { color: var(--accent-light); }
     .terminal-body .cursor {
       display: inline-block; width: 8px; height: 16px;
@@ -443,7 +454,7 @@
         <span class="output">optimization algorithms?</span><br>
         <br>
         <span class="prompt">$</span> <span class="cmd">workshop.status</span><br>
-        <span class="output">&gt; speakers: <span class="highlight">confirmed</span> &nbsp;|&nbsp; registration: <span class="highlight">opening soon</span></span><br>
+        <span class="output">speakers: <span class="highlight">confirmed</span> &nbsp;|&nbsp; registration: <span class="highlight">opening soon</span></span><br>
         <span class="prompt">$</span> <span class="cursor"></span>
       </div>
     </div>
