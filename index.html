@@ -365,6 +365,12 @@
       left: 0;
       color: var(--text-dim);
     }
+    .terminal-body .output.no-prefix {
+      padding-left: 0;
+    }
+    .terminal-body .output.no-prefix::before {
+      content: none;
+    }
     .terminal-body .highlight { color: var(--accent-light); }
     .terminal-body .cursor {
       display: inline-block; width: 8px; height: 16px;
@@ -452,7 +458,7 @@
         <span class="output">Can AI agents facilitate and augment operational business decisions that are typically made by humans and optimization algorithms?</span><br>
         <br>
         <span class="prompt">$</span> <span class="cmd">workshop.status</span><br>
-        <span class="output">speakers: <span class="highlight">confirmed</span> &nbsp;|&nbsp; registration: <span class="highlight">opening soon</span></span><br>
+        <span class="output no-prefix">>Speakers: <span class="highlight">confirmed</span> &nbsp;|&nbsp; registration: <span class="highlight">opening soon</span></span><br>
         <span class="prompt">$</span> <span class="cursor"></span>
       </div>
     </div>
